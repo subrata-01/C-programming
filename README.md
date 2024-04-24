@@ -1,2 +1,2 @@
-# C-programming\
+# C-programming
 Author - Subrata Mahato.
