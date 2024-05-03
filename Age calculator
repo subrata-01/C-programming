@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+	int DD,MM,YY,dd,mm,yy;
+	printf("Enter present date : ");
+	scanf("%d/%d/%d",&DD,&MM,&YY);
+	printf("Enter your DOB : ");
+	scanf("%d/%d/%d",&dd,&mm,&yy);
+	int Months[]={31,28,31,30,31,30,31,31,30,31,30,31};
+	if(DD<dd)
+	{
+		DD=DD+Months[MM-1-1]+1;
+		MM=MM-1;
+	}  
+	if(MM<mm)
+	{
+		MM=MM+12;
+		YY=YY-1;
+	}
+	printf("AGE : %d years %d months %d days.",YY-yy,MM-mm,DD-dd);
+	return 0;
+	
+}
