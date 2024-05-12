@@ -1,21 +1,30 @@
 #include<stdio.h>
-void add_matrix(int *a,int *b,int m,int n)
+void matrix_addition(int a[][10],int b[][10],int row,int col)
 {
-	int c[10][10];
-	int i,j;
-	for(i=0;i<m;i++)
+	int i,j,add[10][10];
+	printf("after matrix additioin : \n");
+	for(i=0;i<row;i++)
 	{
-	  for(j=0;j<n;j++)
-	  {
-	     c[i][j]=*(a+(i*n+j))+*(b+(i*n+j));
-	     printf("%d ",c[i][j]);
-	  }
-	 printf("\n");
+		for(j=0;j<col;j++)
+		{
+			add[i][j]=a[i][j]+b[i][j];
+			printf("%d ",add[i][j]);
+		}
+		printf("\n");
 	}
 }
 int main()
 {
-	int a[2][3]={{1,2,3},{9,6,5}};
-	int b[2][3]={{12,11,9},{22,5,7}};
-	add_matrix(&a[0][0],&b[0][0],2,3);
+	int i,j,row,col,a[10][10],b[10][10];
+	printf("Enter row and column of the matrix : ");
+	scanf("%d%d",&row,&col);
+	printf("Enter first matrix : \n");
+	for(i=0;i<row;i++)
+	for(j=0;j<col;j++)
+	scanf("%d",&a[i][j]);
+	printf("Enter second matrix : \n");
+	for(i=0;i<row;i++)
+	for(j=0;j<col;j++)
+	scanf("%d",&b[i][j]);
+	matrix_addition(a,b,row,col);
 }
