@@ -2,7 +2,7 @@
 void matrix_addition(int a[][10],int b[][10],int row,int col)
 {
 	int i,j,add[10][10];
-	printf("after matrix additioin : \n");
+	printf("after matrix additioin, the new matrix is : \n");
 	for(i=0;i<row;i++)
 	{
 		for(j=0;j<col;j++)
